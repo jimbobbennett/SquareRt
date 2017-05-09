@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Square Rt View-->
+        <scene sceneID="4">
+            <objects>
+                <viewController storyboardIdentifier="SquareRtView" id="5" customClass="SquareRtView" sceneMemberID="viewController" title="SquareRt">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2"/>
+                        <viewControllerLayoutGuide type="bottom" id="3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="9">
+                                <rect key="frame" x="148" y="263" width="305" height="74"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter number" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16">
+                                <rect key="frame" x="208" y="295" width="245" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21">
+                                <rect key="frame" x="148" y="194" width="305" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9" firstAttribute="centerX" secondItem="6" secondAttribute="centerX" id="10"/>
+                            <constraint firstAttribute="centerY" secondItem="9" secondAttribute="centerY" id="11"/>
+                            <constraint firstItem="9" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" id="17"/>
+                            <constraint firstItem="16" firstAttribute="leading" secondItem="9" secondAttribute="leading" constant="60" id="18"/>
+                            <constraint firstItem="9" firstAttribute="bottom" secondItem="16" secondAttribute="bottom" id="20"/>
+                            <constraint firstItem="21" firstAttribute="leading" secondItem="9" secondAttribute="leading" id="22"/>
+                            <constraint firstItem="9" firstAttribute="trailing" secondItem="21" secondAttribute="trailing" id="23"/>
+                            <constraint firstItem="9" firstAttribute="top" secondItem="21" secondAttribute="bottom" constant="15" id="24"/>
+                            <constraint firstItem="21" firstAttribute="top" secondItem="2" secondAttribute="bottom" id="36"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="36"/>
+                                <exclude reference="11"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="11"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="11"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="36"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="NumberEntry" destination="16" id="name-outlet-16"/>
+                        <outlet property="ResultLabel" destination="21" id="name-outlet-21"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="535" y="184"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Line" width="305" height="86"/>
+        <image name="AppLaunchImage" width="200" height="200"/>
+    </resources>
+</document>
